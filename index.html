@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Ketoda</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #060612;
+      --surface:  #0d0d20;
+      --border:   rgba(255,255,255,0.07);
+      --accent:   #7DF9C2;
+      --text:     #e8e8f0;
+      --muted:    #6b6b8a;
+      --max:      720px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      width: 36px; height: 36px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .logo-mark svg { width: 20px; height: 20px; }
+
+    .logo-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 20px;
+      color: #fff;
+      letter-spacing: -0.3px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 72px 32px 48px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(125,249,194,0.08);
+      border: 1px solid rgba(125,249,194,0.2);
+      border-radius: 100px;
+      padding: 4px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 24px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      color: #fff;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 20px;
+    }
+
+    .hero-meta {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .hero-meta span { color: var(--accent); }
+
+    /* ── Main content ── */
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px 96px;
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 56px;
+    }
+    .toc-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+    }
+    .toc li { counter-increment: toc; }
+    .toc a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.15s;
+    }
+    .toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      opacity: 0.7;
+      min-width: 22px;
+    }
+    .toc a:hover { color: var(--accent); }
+
+    section {
+      margin-bottom: 52px;
+      scroll-margin-top: 24px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      color: #fff;
+      letter-spacing: -0.3px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    p { color: var(--text); margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 14px;
+    }
+    li {
+      padding: 6px 0 6px 20px;
+      position: relative;
+      color: var(--text);
+      font-size: 15px;
+    }
+    li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 13px;
+    }
+
+    .highlight-box {
+      background: rgba(125,249,194,0.05);
+      border: 1px solid rgba(125,249,194,0.15);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 20px 0;
+      font-size: 15px;
+      color: rgba(232,232,240,0.9);
+    }
+    .highlight-box strong { color: var(--accent); }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-top: 20px;
+    }
+    .contact-card p { margin-bottom: 8px; font-size: 15px; }
+    .contact-card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+
+    strong { color: #fff; font-weight: 600; }
+    em { color: var(--muted); font-style: normal; font-size: 14px; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 32px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 20px; }
+      .hero, main { padding-left: 20px; padding-right: 20px; }
+      .toc ol { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">
+    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 2L12.5 7.5H18L13.5 11L15.5 17L10 13.5L4.5 17L6.5 11L2 7.5H7.5L10 2Z"
+            fill="#060612" stroke="#060612" stroke-width="0.5"/>
+    </svg>
+  </div>
+  <span class="logo-name">Ketoda</span>
+</header>
+
+<div class="hero">
+  <div class="badge">Legal</div>
+  <h1>Privacy Policy</h1>
+  <p class="hero-meta">
+    Last updated <span>May 15, 2026</span> &nbsp;·&nbsp; Effective immediately
+  </p>
+</div>
+
+<main>
+
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#data-collected">Data We Collect</a></li>
+      <li><a href="#accessibility">Accessibility Service</a></li>
+      <li><a href="#crashlytics">Crash Reporting</a></li>
+      <li><a href="#notifications">Notifications</a></li>
+      <li><a href="#third-parties">Third Parties</a></li>
+      <li><a href="#retention">Data Retention</a></li>
+      <li><a href="#rights">Your Rights</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </div>
+
+  <section id="overview">
+    <h2>1. Overview</h2>
+    <p>Ketoda ("we", "us", "our") is a focus and digital wellness app. We built it with a simple principle: <strong>your data stays on your device</strong>. We do not sell your personal information. We do not build advertising profiles. We do not share your data with marketers.</p>
+    <p>This policy explains what limited data we collect, why we collect it, and how you can control it.</p>
+    <div class="highlight-box">
+      <strong>The short version:</strong> Ketoda works almost entirely offline. Your blocked apps, workout history, streaks, and sleep schedule never leave your phone. The only data that leaves your device is anonymous crash reports (if you consent) and scheduled notification tokens.
+    </div>
+  </section>
+
+  <section id="data-collected">
+    <h2>2. Data We Collect</h2>
+    <p>Ketoda stores the following <strong>locally on your device</strong> using Android's SharedPreferences:</p>
+    <ul>
+      <li>Your selected blocked apps (stored as package names, e.g. <em>com.instagram.android</em>)</li>
+      <li>Workout session count and streak length</li>
+      <li>Sleep schedule (bedtime and wake time you set)</li>
+      <li>Social media time limit preference</li>
+      <li>Whether onboarding has been completed</li>
+      <li>Notification scheduling preferences</li>
+    </ul>
+    <p>None of this is transmitted to our servers. It never leaves your device. Uninstalling Ketoda permanently deletes it.</p>
+    <p>We do <strong>not</strong> collect:</p>
+    <ul>
+      <li>Your name, email, or any account information (Ketoda has no accounts)</li>
+      <li>Device identifiers, advertising IDs, or fingerprints</li>
+      <li>Location data</li>
+      <li>The content of any app you use or block</li>
+      <li>Browsing history or app usage statistics beyond what is needed for blocking</li>
+    </ul>
+  </section>
+
+  <section id="accessibility">
+    <h2>3. Accessibility Service</h2>
+    <p>Ketoda uses Android's Accessibility Service to detect when a blocked app comes to the foreground. This is the only mechanism Android provides for third-party apps to perform foreground app detection without requiring a rooted device.</p>
+    <div class="highlight-box">
+      <strong>What the Accessibility Service does:</strong> It receives a single event — the package name of the app that just opened (e.g. <em>com.instagram.android</em>). If that package is on your block list and your session is active, Ketoda redirects you.
+    </div>
+    <p><strong>What the Accessibility Service does NOT do:</strong></p>
+    <ul>
+      <li>Read the content of any app's screen</li>
+      <li>Record keystrokes, passwords, or text input</li>
+      <li>Access photos, messages, or personal files</li>
+      <li>Transmit any data off your device</li>
+    </ul>
+    <p>The accessibility service declaration in our app explicitly sets <em>android:canRetrieveWindowContent="false"</em>, which prevents any screen content access at the OS level. You can verify this in our open manifest.</p>
+    <p>You can disable the Accessibility Service at any time in <strong>Settings → Accessibility → Installed apps → Ketoda</strong>. Blocking will stop working, but no other app functionality is affected.</p>
+  </section>
+
+  <section id="crashlytics">
+    <h2>4. Crash Reporting (Firebase Crashlytics)</h2>
+    <p>Ketoda uses <strong>Firebase Crashlytics</strong>, a free service by Google, to receive anonymous crash reports. This helps us fix bugs that would otherwise be invisible to us.</p>
+    <p>When the app crashes, Crashlytics may send:</p>
+    <ul>
+      <li>The stack trace of the crash (which line of code failed)</li>
+      <li>Device model and Android version (e.g. <em>Samsung Galaxy S24, Android 14</em>)</li>
+      <li>App version number</li>
+      <li>A randomly generated, non-reversible installation ID</li>
+      <li>Time of the crash</li>
+    </ul>
+    <p>Crashlytics does <strong>not</strong> receive your blocked app list, your streak data, your name, or any personal content.</p>
+    <p>Crash reporting is governed by <a href="https://firebase.google.com/support/privacy" target="_blank" style="color:var(--accent)">Google's Privacy Policy</a>. You can opt out of crash reporting at any time in <strong>Ketoda → Settings → Crash Reporting</strong>. Opting out takes effect immediately.</p>
+  </section>
+
+  <section id="notifications">
+    <h2>5. Notifications</h2>
+    <p>Ketoda schedules local notifications (workout reminders, streak alerts, sleep warnings) entirely on-device using Android's alarm system. These notifications are not routed through any external server or push notification service. No notification token or device identifier is sent to us.</p>
+    <p>You can disable all notifications in <strong>Settings → Apps → Ketoda → Notifications</strong> at any time.</p>
+  </section>
+
+  <section id="third-parties">
+    <h2>6. Third-Party Services</h2>
+    <p>Ketoda integrates the following third-party SDKs:</p>
+    <ul>
+      <li><strong>Firebase Crashlytics (Google)</strong> — anonymous crash reporting. <a href="https://firebase.google.com/support/privacy" target="_blank" style="color:var(--accent)">Privacy policy →</a></li>
+      <li><strong>Google Fonts</strong> — font files are downloaded once and cached locally. No personal data is sent. <a href="https://developers.google.com/fonts/faq/privacy" target="_blank" style="color:var(--accent)">Privacy policy →</a></li>
+      <li><strong>Google Play Billing</strong> — if you subscribe, your payment is processed entirely by Google. We receive only a subscription status (active/cancelled). We never see your card details. <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" target="_blank" style="color:var(--accent)">Privacy policy →</a></li>
+    </ul>
+    <p>We do not use analytics SDKs (no Amplitude, Mixpanel, Firebase Analytics, or similar). We do not use advertising SDKs.</p>
+  </section>
+
+  <section id="retention">
+    <h2>7. Data Retention</h2>
+    <p>All data Ketoda stores lives on your device and is retained until you uninstall the app or clear app data in Android settings. Crashlytics crash reports are retained by Google for 90 days per their standard policy.</p>
+  </section>
+
+  <section id="rights">
+    <h2>8. Your Rights</h2>
+    <p>Since Ketoda stores no personal data on our servers, most data rights (access, portability, deletion) are automatically satisfied by uninstalling the app. For Crashlytics data, you can:</p>
+    <ul>
+      <li>Opt out of crash reporting in-app (Settings → Crash Reporting → OFF)</li>
+      <li>Request deletion of any crash reports associated with your installation ID by contacting us</li>
+    </ul>
+    <p>If you are in the European Economic Area, United Kingdom, or California, you have additional rights under GDPR, UK GDPR, and CCPA respectively. Contact us to exercise any of these rights.</p>
+  </section>
+
+  <section id="children">
+    <h2>9. Children's Privacy</h2>
+    <p>Ketoda is not directed at children under 13. We do not knowingly collect any information from children under 13. If you believe a child has used Ketoda and you have concerns, please contact us and we will address them promptly.</p>
+  </section>
+
+  <section id="contact">
+    <h2>10. Contact</h2>
+    <p>Questions about this policy or requests about your data:</p>
+    <div class="contact-card">
+      <p><strong>Ketoda Privacy</strong></p>
+      <p>Email: <a href="mailto:tedkemodah@gmail.com">tedkemodah@gmail.com</a></p>
+      <p style="margin-top:12px; color: var(--muted); font-size:14px;">We aim to respond to all privacy enquiries within 5 business days.</p>
+    </div>
+    <p style="margin-top: 24px; color: var(--muted); font-size: 14px;">We may update this policy from time to time. Material changes will be notified in-app. Continued use after an update constitutes acceptance of the revised policy.</p>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Ketoda. All rights reserved.
+</footer>
+
+</body>
+</html>
