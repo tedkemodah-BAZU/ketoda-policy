@@ -239,7 +239,7 @@
   <div class="badge">Legal</div>
   <h1>Privacy Policy</h1>
   <p class="hero-meta">
-    Last updated <span>May 15, 2026</span> &nbsp;·&nbsp; Effective immediately
+    Last updated <span>June 6, 2026</span> &nbsp;·&nbsp; Effective immediately
   </p>
 </div>
 
@@ -253,6 +253,7 @@
       <li><a href="#accessibility">Accessibility Service</a></li>
       <li><a href="#crashlytics">Crash Reporting</a></li>
       <li><a href="#notifications">Notifications</a></li>
+      <li><a href="#camera">Camera &amp; Pose Detection</a></li>
       <li><a href="#third-parties">Third Parties</a></li>
       <li><a href="#retention">Data Retention</a></li>
       <li><a href="#rights">Your Rights</a></li>
@@ -330,12 +331,38 @@
     <p>You can disable all notifications in <strong>Settings → Apps → Ketoda → Notifications</strong> at any time.</p>
   </section>
 
+  <section id="camera">
+    <h2>Camera &amp; Pose Detection</h2>
+    <p>Ketoda uses your device camera to verify that you complete a physical exercise before unlocking blocked apps. This feature uses <strong>Google ML Kit Pose Detection</strong>, which runs entirely on-device.</p>
+    <div class="highlight-box">
+      <strong>The camera is used only in real time during an active workout.</strong> No video, photos, or image frames are ever recorded, saved, or transmitted. Processing happens locally on your device and the data is discarded immediately after each frame is analysed.
+    </div>
+    <p><strong>What the camera does:</strong></p>
+    <ul>
+      <li>Captures live video frames while you exercise</li>
+      <li>Passes each frame to ML Kit on-device to detect body pose landmarks</li>
+      <li>Counts repetitions or measures hold time based on joint angles</li>
+      <li>Discards the frame immediately after analysis — nothing is stored</li>
+    </ul>
+    <p><strong>What the camera does NOT do:</strong></p>
+    <ul>
+      <li>Record or save any video or photos</li>
+      <li>Transmit any image data off your device</li>
+      <li>Identify you or any other person</li>
+      <li>Access the camera outside of an active workout session</li>
+      <li>Share any data with third parties</li>
+    </ul>
+    <p>You can deny camera permission at any time in <strong>Settings → Apps → Ketoda → Permissions → Camera</strong>. The app will continue to work normally — exercise verification will be skipped for devices without camera access.</p>
+  </section>
+
   <section id="third-parties">
     <h2>6. Third-Party Services</h2>
     <p>Ketoda integrates the following third-party SDKs:</p>
     <ul>
       <li><strong>Firebase Crashlytics (Google)</strong> — anonymous crash reporting. <a href="https://firebase.google.com/support/privacy" target="_blank" style="color:var(--accent)">Privacy policy →</a></li>
       <li><strong>Google Fonts</strong> — font files are downloaded once and cached locally. No personal data is sent. <a href="https://developers.google.com/fonts/faq/privacy" target="_blank" style="color:var(--accent)">Privacy policy →</a></li>
+      <li><strong>RevenueCat</strong> — subscription management. Receives your subscription status (active/cancelled/trial) from Google Play or the App Store. No payment details are shared with RevenueCat or us. <a href="https://www.revenuecat.com/privacy" target="_blank" style="color:var(--accent)">Privacy policy →</a></li>
+      <li><strong>Google ML Kit (Pose Detection)</strong> — runs entirely on-device. No data is sent to Google. <a href="https://developers.google.com/ml-kit/terms" target="_blank" style="color:var(--accent)">Terms →</a></li>
       <li><strong>Google Play Billing</strong> — if you subscribe, your payment is processed entirely by Google. We receive only a subscription status (active/cancelled). We never see your card details. <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" target="_blank" style="color:var(--accent)">Privacy policy →</a></li>
     </ul>
     <p>We do not use analytics SDKs (no Amplitude, Mixpanel, Firebase Analytics, or similar). We do not use advertising SDKs.</p>
